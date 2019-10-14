@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="123456import requestsimport jsonimport timefrom bs4 import BeautifulSoupimport lxmlimport re 12345url = &apos;https://movie.douban.com/top250?start=&amp;#123;index&amp;#125;&amp;amp;filter=&apos;headers = &amp;#123;    &apos;User-A">
+  <meta name="description" content="1234headers = &amp;#123;    &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36&apos;, #      &apos;Cookie&apos;: &apos;ll=&quot;118304&quot;; bid=MRaVToP2">
 <meta name="keywords" content="爬虫,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用python爬取豆瓣top250电影信息">
 <meta property="og:url" content="http://yoursite.com/posts/20476.html/index.html">
 <meta property="og:site_name" content="Noodle&#39;s Blog">
-<meta property="og:description" content="123456import requestsimport jsonimport timefrom bs4 import BeautifulSoupimport lxmlimport re 12345url = &apos;https://movie.douban.com/top250?start=&amp;#123;index&amp;#125;&amp;amp;filter=&apos;headers = &amp;#123;    &apos;User-A">
+<meta property="og:description" content="1234headers = &amp;#123;    &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36&apos;, #      &apos;Cookie&apos;: &apos;ll=&quot;118304&quot;; bid=MRaVToP2">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-13T16:36:11.961Z">
+<meta property="og:updated_time" content="2019-10-14T14:29:40.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用python爬取豆瓣top250电影信息">
-<meta name="twitter:description" content="123456import requestsimport jsonimport timefrom bs4 import BeautifulSoupimport lxmlimport re 12345url = &apos;https://movie.douban.com/top250?start=&amp;#123;index&amp;#125;&amp;amp;filter=&apos;headers = &amp;#123;    &apos;User-A">
+<meta name="twitter:description" content="1234headers = &amp;#123;    &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36&apos;, #      &apos;Cookie&apos;: &apos;ll=&quot;118304&quot;; bid=MRaVToP2">
   <link rel="canonical" href="http://yoursite.com/posts/20476/">
 
 
@@ -325,18 +325,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> lxml</span><br><span class="line"><span class="keyword">import</span> re</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">'https://movie.douban.com/top250?start=&#123;index&#125;&amp;filter='</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'</span>, </span><br><span class="line"><span class="comment">#      'Cookie': 'll="118304"; bid=MRaVToP2u_g; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1570876405%2C%22https%3A%2F%2Fwww.google.com%2F%22%5D; _pk_ses.100001.4cf6=*; ap_v=0,6.0; __utma=30149280.1523140454.1570876406.1570876406.1570876406.1; __utmc=30149280; __utmz=30149280.1570876406.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utma=223695111.1347526559.1570876406.1570876406.1570876406.1; __utmb=223695111.0.10.1570876406; __utmc=223695111; __utmz=223695111.1570876406.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __yadk_uid=qJHzv7itVtV66KY59KigjKSRkiRSExmc; _vwo_uuid_v2=D0C6FD9CD9C5D9293C692FF61243E5B57|672e48166e1aba9fea277d631c4ae239; ct=y; trc_cookie_storage=taboola%2520global%253Auser-id%3Df300f145-5cf3-4e77-a243-c04e0808e240-tuct49b360b; __utmt_douban=1; _pk_id.100001.4cf6=7c51b98021727b9f.1570876405.1.1570879490.1570876405.; __utmb=30149280.40.10.1570876406'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHTMLText</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.get(url=url, timeout=<span class="number">30</span>)</span><br><span class="line">        r.raise_for_status()    <span class="comment">#如果状态不是200，引发HTTPError异常</span></span><br><span class="line">        r.encoding = r.apparent_encoding</span><br><span class="line">        <span class="keyword">return</span> r.content</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print( <span class="string">"产生异常"</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">movies_urls=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    url = url.format(index=i*<span class="number">25</span>)</span><br><span class="line">    rsp = getHTMLText(url).decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    soup = BeautifulSoup(rsp, <span class="string">'lxml'</span>)</span><br><span class="line">    soup_movies = soup.ol.find_all(name=<span class="string">'li'</span>)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> soup_movies:</span><br><span class="line">        movies_urls.append(x.a.attrs[<span class="string">'href'</span>])</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len(movies_urls)</span><br></pre></td></tr></table></figure>
-<pre><code>250
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">top250=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> movies_urls:</span><br><span class="line">    movie_info = &#123;&#125;</span><br><span class="line">    rsp = getHTMLText(i).decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    soup = BeautifulSoup(rsp, <span class="string">'lxml'</span>)</span><br><span class="line">    info = soup.find_all(name=<span class="string">'h1'</span>)[<span class="number">0</span>]</span><br><span class="line">    title = info.span.text</span><br><span class="line">    year = info.find_all(attrs=&#123;<span class="string">'class'</span>: <span class="string">'year'</span>&#125;)[<span class="number">0</span>].text.strip(<span class="string">'()'</span>)</span><br><span class="line">    temp = soup.find_all(name=<span class="string">'div'</span>, attrs=&#123;<span class="string">'id'</span>:<span class="string">'info'</span>&#125;)[<span class="number">0</span>]</span><br><span class="line">    director = temp.find_all(name=<span class="string">'a'</span>, attrs=&#123;<span class="string">'rel'</span>: <span class="string">'v:directedBy'</span>&#125;)[<span class="number">0</span>].text</span><br><span class="line">    temp_actor = temp.find_all(name=<span class="string">'a'</span>, attrs=&#123;<span class="string">'rel'</span>: <span class="string">'v:starring'</span>&#125;)[:<span class="number">4</span>] <span class="comment">#只取前4个演员</span></span><br><span class="line">    actors = [x.text <span class="keyword">for</span> x <span class="keyword">in</span> temp_actor]</span><br><span class="line">    temp_tags = temp.find_all(name=<span class="string">'span'</span>, attrs=&#123;<span class="string">'property'</span>: <span class="string">'v:genre'</span>&#125;)</span><br><span class="line">    tags = [x.text <span class="keyword">for</span> x <span class="keyword">in</span> temp_tags]</span><br><span class="line">    temp_rating = soup.find_all(name=<span class="string">'div'</span>, attrs=&#123;<span class="string">'typeof'</span>: <span class="string">'v:Rating'</span>&#125;)[<span class="number">0</span>]</span><br><span class="line">    rating = temp_rating.find_all(name=<span class="string">'strong'</span>, attrs=&#123;<span class="string">'property'</span>: <span class="string">'v:average'</span>&#125;)[<span class="number">0</span>].text</span><br><span class="line">    rating_people = temp_rating.find_all(name=<span class="string">'span'</span>, attrs=&#123;<span class="string">'property'</span>: <span class="string">'v:votes'</span>&#125;)[<span class="number">0</span>].text</span><br><span class="line">    country = temp.find_all(name=<span class="string">'span'</span>, attrs=&#123;<span class="string">'property'</span>: <span class="string">'v:genre'</span>&#125;)[<span class="number">-1</span>].find_next_siblings(text=<span class="literal">True</span>)[<span class="number">1</span>]</span><br><span class="line">    movie_info[<span class="string">'title'</span>] = title</span><br><span class="line">    movie_info[<span class="string">'year'</span>] = year</span><br><span class="line">    movie_info[<span class="string">'director'</span>] = director</span><br><span class="line">    movie_info[<span class="string">'actors'</span>] = actors</span><br><span class="line">    movie_info[<span class="string">'tags'</span>] = tags</span><br><span class="line">    movie_info[<span class="string">'rating'</span>] = rating</span><br><span class="line">    movie_info[<span class="string">'rating_people'</span>] = rating_people</span><br><span class="line">    movie_info[<span class="string">'country'</span>] = country</span><br><span class="line">    top250.append(movie_info)</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'top250.json'</span>, <span class="string">'w+'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    json.dump(top250, f)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'top250.json'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    noodle = json.load(f)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len(noodle)</span><br></pre></td></tr></table></figure>
-<pre><code>250
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">db = pd.DataFrame(noodle)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db[:<span class="number">20</span>]</span><br></pre></td></tr></table></figure>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'</span>, </span><br><span class="line"><span class="comment">#      'Cookie': 'll="118304"; bid=MRaVToP2u_g; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1570876405%2C%22https%3A%2F%2Fwww.google.com%2F%22%5D; _pk_ses.100001.4cf6=*; ap_v=0,6.0; __utma=30149280.1523140454.1570876406.1570876406.1570876406.1; __utmc=30149280; __utmz=30149280.1570876406.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utma=223695111.1347526559.1570876406.1570876406.1570876406.1; __utmb=223695111.0.10.1570876406; __utmc=223695111; __utmz=223695111.1570876406.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __yadk_uid=qJHzv7itVtV66KY59KigjKSRkiRSExmc; _vwo_uuid_v2=D0C6FD9CD9C5D9293C692FF61243E5B57|672e48166e1aba9fea277d631c4ae239; ct=y; trc_cookie_storage=taboola%2520global%253Auser-id%3Df300f145-5cf3-4e77-a243-c04e0808e240-tuct49b360b; __utmt_douban=1; _pk_id.100001.4cf6=7c51b98021727b9f.1570876405.1.1570879490.1570876405.; __utmb=30149280.40.10.1570876406'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHTMLText</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.get(url=url, timeout=<span class="number">30</span>)</span><br><span class="line">        r.raise_for_status()    <span class="comment">#如果状态不是200，引发HTTPError异常</span></span><br><span class="line"><span class="comment">#         r.encoding = r.apparent_encoding</span></span><br><span class="line">        <span class="keyword">return</span> r.content</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print( <span class="string">"产生异常"</span>)</span><br><span class="line">        print(r.status_code)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">movies_urls=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    url = <span class="string">'https://movie.douban.com/top250?start=%s&amp;filter='</span> % (i*<span class="number">25</span>)</span><br><span class="line">    rsp = getHTMLText(url).decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    soup = BeautifulSoup(rsp, <span class="string">'lxml'</span>)</span><br><span class="line">    soup_movies = soup.ol.find_all(name=<span class="string">'li'</span>)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> soup_movies:</span><br><span class="line">        movies_urls.append(x.a.attrs[<span class="string">'href'</span>])</span><br><span class="line">    time.sleep(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">top250=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> movies_urls:</span><br><span class="line">    movie_info = &#123;&#125;</span><br><span class="line">    rsp = getHTMLText(i).decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    soup = BeautifulSoup(rsp, <span class="string">'lxml'</span>)</span><br><span class="line"></span><br><span class="line">    big_title = soup.find_all(name=<span class="string">'h1'</span>)[<span class="number">0</span>]</span><br><span class="line">    title = big_title.span.text</span><br><span class="line">    year = big_title.find_all(attrs=&#123;<span class="string">'class'</span>: <span class="string">'year'</span>&#125;)[<span class="number">0</span>].text.strip(<span class="string">'()'</span>)</span><br><span class="line">    </span><br><span class="line">    temp = soup.find_all(name=<span class="string">'div'</span>, attrs=&#123;<span class="string">'id'</span>:<span class="string">'info'</span>&#125;)[<span class="number">0</span>].text</span><br><span class="line">    director = re.findall(<span class="string">r"导演:\s.+"</span>, temp)[<span class="number">0</span>][<span class="number">4</span>:].split(<span class="string">'/'</span>)</span><br><span class="line">    tags = re.findall(<span class="string">r"类型:\s.+"</span>, temp)[<span class="number">0</span>][<span class="number">4</span>:].split(<span class="string">'/'</span>)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        actors = re.findall(<span class="string">r"主演:\s.+"</span>, temp)[<span class="number">0</span>][<span class="number">4</span>:].split(<span class="string">'/'</span>)[:<span class="number">4</span>] <span class="comment">#取前四个演员</span></span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        actors = <span class="literal">None</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        country = re.findall(<span class="string">r"制片国家/地区:\s.+"</span>, temp)[<span class="number">0</span>][<span class="number">9</span>:].split(<span class="string">'/'</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        country = <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line">    temp_rating = soup.find_all(name=<span class="string">'div'</span>, attrs=&#123;<span class="string">'class'</span>: <span class="string">'rating_self clearfix'</span>, <span class="string">'typeof'</span>: <span class="string">'v:Rating'</span>&#125;)[<span class="number">0</span>].text</span><br><span class="line">    _x = re.findall(<span class="string">r'[0-9|\.]+'</span>, temp_rating)</span><br><span class="line">    rating = _x[<span class="number">0</span>]</span><br><span class="line">    rating_people = _x[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        summary = soup.find_all(name=<span class="string">'span'</span>, attrs=&#123;<span class="string">'class'</span>: <span class="string">'all hidden'</span>&#125;)[<span class="number">0</span>].text</span><br><span class="line">        summary = re.sub(<span class="string">r'[\s]'</span>, <span class="string">''</span>, summary)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        summary = soup.find_all(name=<span class="string">'span'</span>, attrs=&#123;<span class="string">'property'</span>: <span class="string">'v:summary'</span>&#125;)[<span class="number">0</span>].text</span><br><span class="line">        summary = re.sub(<span class="string">r'[\s]'</span>, <span class="string">''</span>, summary)</span><br><span class="line">        </span><br><span class="line">    movie_info[<span class="string">'title'</span>] = title</span><br><span class="line">    movie_info[<span class="string">'year'</span>] = year</span><br><span class="line">    movie_info[<span class="string">'director'</span>] = director</span><br><span class="line">    movie_info[<span class="string">'actors'</span>] = actors</span><br><span class="line">    movie_info[<span class="string">'tags'</span>] = tags</span><br><span class="line">    movie_info[<span class="string">'rating'</span>] = rating</span><br><span class="line">    movie_info[<span class="string">'rating_people'</span>] = rating_people</span><br><span class="line">    movie_info[<span class="string">'country'</span>] = country</span><br><span class="line">    movie_info[<span class="string">'summary'</span>] = summary</span><br><span class="line">    top250.append(movie_info)</span><br><span class="line">    time.sleep(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'db250.json'</span>, <span class="string">'w+'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    json.dump(top250, f)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'db250.json'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    db = json.load(f)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.DataFrame(db)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[:<span class="number">50</span>]</span><br></pre></td></tr></table></figure>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -363,6 +358,7 @@
       <th>rating</th>
       <th>rating_people</th>
       <th>country</th>
+      <th>summary</th>
     </tr>
   </thead>
   <tbody>
@@ -370,225 +366,607 @@
       <td>0</td>
       <td>肖申克的救赎 The Shawshank Redemption</td>
       <td>1994</td>
-      <td>弗兰克·德拉邦特</td>
-      <td>[蒂姆·罗宾斯, 摩根·弗里曼, 鲍勃·冈顿, 威廉姆·赛德勒]</td>
-      <td>[剧情, 犯罪]</td>
+      <td>[弗兰克·德拉邦特]</td>
+      <td>[蒂姆·罗宾斯 ,  摩根·弗里曼 ,  鲍勃·冈顿 ,  威廉姆·赛德勒 ]</td>
+      <td>[剧情 ,  犯罪]</td>
       <td>9.7</td>
-      <td>1643491</td>
-      <td>美国</td>
+      <td>1645060</td>
+      <td>[美国]</td>
+      <td>20世纪40年代末，小有成就的青年银行家安迪（蒂姆·罗宾斯TimRobbins饰）因涉嫌杀害...</td>
     </tr>
     <tr>
       <td>1</td>
       <td>霸王别姬</td>
       <td>1993</td>
-      <td>陈凯歌</td>
-      <td>[张国荣, 张丰毅, 巩俐, 葛优]</td>
-      <td>[剧情, 爱情, 同性]</td>
+      <td>[陈凯歌]</td>
+      <td>[张国荣 ,  张丰毅 ,  巩俐 ,  葛优 ]</td>
+      <td>[剧情 ,  爱情 ,  同性]</td>
       <td>9.6</td>
-      <td>1214100</td>
-      <td>中国大陆 / 中国香港</td>
+      <td>1215287</td>
+      <td>[中国大陆 ,  中国香港]</td>
+      <td>段小楼（张丰毅）与程蝶衣（张国荣）是一对打小一起长大的师兄弟，两人一个演生，一个饰旦，一向配...</td>
     </tr>
     <tr>
       <td>2</td>
       <td>阿甘正传 Forrest Gump</td>
       <td>1994</td>
-      <td>罗伯特·泽米吉斯</td>
-      <td>[汤姆·汉克斯, 罗宾·怀特, 加里·西尼斯, 麦凯尔泰·威廉逊]</td>
-      <td>[剧情, 爱情]</td>
+      <td>[罗伯特·泽米吉斯]</td>
+      <td>[汤姆·汉克斯 ,  罗宾·怀特 ,  加里·西尼斯 ,  麦凯尔泰·威廉逊 ]</td>
+      <td>[剧情 ,  爱情]</td>
       <td>9.5</td>
-      <td>1273456</td>
-      <td>美国</td>
+      <td>1274504</td>
+      <td>[美国]</td>
+      <td>阿甘（汤姆·汉克斯饰）于二战结束后不久出生在美国南方阿拉巴马州一个闭塞的小镇，他先天弱智，智...</td>
     </tr>
     <tr>
       <td>3</td>
       <td>这个杀手不太冷 Léon</td>
       <td>1994</td>
-      <td>吕克·贝松</td>
-      <td>[让·雷诺, 娜塔莉·波特曼, 加里·奥德曼, 丹尼·爱罗]</td>
-      <td>[剧情, 动作, 犯罪]</td>
+      <td>[吕克·贝松]</td>
+      <td>[让·雷诺 ,  娜塔莉·波特曼 ,  加里·奥德曼 ,  丹尼·爱罗 ]</td>
+      <td>[剧情 ,  动作 ,  犯罪]</td>
       <td>9.4</td>
-      <td>1466800</td>
-      <td>法国</td>
+      <td>1467881</td>
+      <td>[法国]</td>
+      <td>里昂（让·雷诺饰）是名孤独的职业杀手，受人雇佣。一天，邻居家小姑娘马蒂尔达（纳塔丽·波特曼饰...</td>
     </tr>
     <tr>
       <td>4</td>
       <td>美丽人生 La vita è bella</td>
       <td>1997</td>
-      <td>罗伯托·贝尼尼</td>
-      <td>[罗伯托·贝尼尼, 尼可莱塔·布拉斯基, 乔治·坎塔里尼, 朱斯蒂诺·杜拉诺]</td>
-      <td>[剧情, 喜剧, 爱情, 战争]</td>
+      <td>[罗伯托·贝尼尼]</td>
+      <td>[罗伯托·贝尼尼 ,  尼可莱塔·布拉斯基 ,  乔治·坎塔里尼 ,  朱斯蒂诺·杜拉诺 ]</td>
+      <td>[剧情 ,  喜剧 ,  爱情 ,  战争]</td>
       <td>9.5</td>
-      <td>744378</td>
-      <td>意大利</td>
+      <td>745026</td>
+      <td>[意大利]</td>
+      <td>犹太青年圭多（罗伯托·贝尼尼）邂逅美丽的女教师多拉（尼可莱塔·布拉斯基），他彬彬有礼的向多拉...</td>
     </tr>
     <tr>
       <td>5</td>
       <td>泰坦尼克号 Titanic</td>
       <td>1997</td>
-      <td>詹姆斯·卡梅隆</td>
-      <td>[莱昂纳多·迪卡普里奥, 凯特·温丝莱特, 比利·赞恩, 凯西·贝茨]</td>
-      <td>[剧情, 爱情, 灾难]</td>
+      <td>[詹姆斯·卡梅隆]</td>
+      <td>[莱昂纳多·迪卡普里奥 ,  凯特·温丝莱特 ,  比利·赞恩 ,  凯西·贝茨 ]</td>
+      <td>[剧情 ,  爱情 ,  灾难]</td>
       <td>9.4</td>
-      <td>1213047</td>
-      <td>美国</td>
+      <td>1214101</td>
+      <td>[美国]</td>
+      <td>1912年4月10日，号称“世界工业史上的奇迹”的豪华客轮泰坦尼克号开始了自己的处女航，从英...</td>
     </tr>
     <tr>
       <td>6</td>
       <td>千与千寻 千と千尋の神隠し</td>
       <td>2001</td>
-      <td>宫崎骏</td>
-      <td>[柊瑠美, 入野自由, 夏木真理, 菅原文太]</td>
-      <td>[剧情, 动画, 奇幻]</td>
+      <td>[宫崎骏]</td>
+      <td>[柊瑠美 ,  入野自由 ,  夏木真理 ,  菅原文太 ]</td>
+      <td>[剧情 ,  动画 ,  奇幻]</td>
       <td>9.3</td>
-      <td>1303165</td>
-      <td></td>
+      <td>1304154</td>
+      <td>[日本]</td>
+      <td>千寻和爸爸妈妈一同驱车前往新家，在郊外的小路上不慎进入了神秘的隧道——他们去到了另外一个诡异...</td>
     </tr>
     <tr>
       <td>7</td>
       <td>辛德勒的名单 Schindler's List</td>
       <td>1993</td>
-      <td>史蒂文·斯皮尔伯格</td>
-      <td>[连姆·尼森, 本·金斯利, 拉尔夫·费因斯, 卡罗琳·古多尔]</td>
-      <td>[剧情, 历史, 战争]</td>
+      <td>[史蒂文·斯皮尔伯格]</td>
+      <td>[连姆·尼森 ,  本·金斯利 ,  拉尔夫·费因斯 ,  卡罗琳·古多尔 ]</td>
+      <td>[剧情 ,  历史 ,  战争]</td>
       <td>9.5</td>
-      <td>657444</td>
-      <td>美国</td>
+      <td>657970</td>
+      <td>[美国]</td>
+      <td>1939年，波兰在纳粹德国的统治下，党卫军对犹太人进行了隔离统治。德国商人奥斯卡·辛德勒（连...</td>
     </tr>
     <tr>
       <td>8</td>
       <td>盗梦空间 Inception</td>
       <td>2010</td>
-      <td>克里斯托弗·诺兰</td>
-      <td>[莱昂纳多·迪卡普里奥, 约瑟夫·高登-莱维特, 艾伦·佩吉, 汤姆·哈迪]</td>
-      <td>[剧情, 科幻, 悬疑, 冒险]</td>
+      <td>[克里斯托弗·诺兰]</td>
+      <td>[莱昂纳多·迪卡普里奥 ,  约瑟夫·高登-莱维特 ,  艾伦·佩吉 ,  汤姆·哈迪 ]</td>
+      <td>[剧情 ,  科幻 ,  悬疑 ,  冒险]</td>
       <td>9.3</td>
-      <td>1249764</td>
-      <td>美国 / 英国</td>
+      <td>1250626</td>
+      <td>[美国 ,  英国]</td>
+      <td>道姆·柯布（莱昂纳多·迪卡普里奥LeonardoDiCaprio饰）与同事阿瑟（约瑟夫·戈登...</td>
     </tr>
     <tr>
       <td>9</td>
       <td>忠犬八公的故事 Hachi: A Dog's Tale</td>
       <td>2009</td>
-      <td>拉斯·霍尔斯道姆</td>
-      <td>[理查·基尔, 萨拉·罗默尔, 琼·艾伦, 罗比·萨布莱特]</td>
+      <td>[拉斯·霍尔斯道姆]</td>
+      <td>[理查·基尔 ,  萨拉·罗默尔 ,  琼·艾伦 ,  罗比·萨布莱特 ]</td>
       <td>[剧情]</td>
       <td>9.3</td>
-      <td>842960</td>
-      <td>美国 / 英国</td>
+      <td>843664</td>
+      <td>[美国 ,  英国]</td>
+      <td>八公（Forest饰）是一条谜一样的犬，因为没有人知道它从哪里来。教授帕克（理查·基尔Ric...</td>
     </tr>
     <tr>
       <td>10</td>
       <td>机器人总动员 WALL·E</td>
       <td>2008</td>
-      <td>安德鲁·斯坦顿</td>
-      <td>[本·贝尔特, 艾丽莎·奈特, 杰夫·格尔林, 佛莱德·威拉特]</td>
-      <td>[爱情, 科幻, 动画, 冒险]</td>
+      <td>[安德鲁·斯坦顿]</td>
+      <td>[本·贝尔特 ,  艾丽莎·奈特 ,  杰夫·格尔林 ,  佛莱德·威拉特 ]</td>
+      <td>[爱情 ,  科幻 ,  动画 ,  冒险]</td>
       <td>9.3</td>
-      <td>828198</td>
-      <td></td>
+      <td>828807</td>
+      <td>[美国]</td>
+      <td>公元2805年，人类文明高度发展，却因污染和生活垃圾大量增加使得地球不再适于人类居住。地球人...</td>
     </tr>
     <tr>
       <td>11</td>
       <td>三傻大闹宝莱坞 3 Idiots</td>
       <td>2009</td>
-      <td>拉吉库马尔·希拉尼</td>
-      <td>[阿米尔·汗, 卡琳娜·卡普尔, 马达范, 沙尔曼·乔希]</td>
-      <td>[剧情, 喜剧, 爱情, 歌舞]</td>
+      <td>[拉吉库马尔·希拉尼]</td>
+      <td>[阿米尔·汗 ,  卡琳娜·卡普尔 ,  马达范 ,  沙尔曼·乔希 ]</td>
+      <td>[剧情 ,  喜剧 ,  爱情 ,  歌舞]</td>
       <td>9.2</td>
-      <td>1132836</td>
-      <td>印度</td>
+      <td>1133673</td>
+      <td>[印度]</td>
+      <td>本片根据印度畅销书作家奇坦·巴哈特（ChetanBhagat）的处女作小说《五点人》（Fiv...</td>
     </tr>
     <tr>
       <td>12</td>
       <td>放牛班的春天 Les choristes</td>
       <td>2004</td>
-      <td>克里斯托夫·巴拉蒂</td>
-      <td>[热拉尔·朱尼奥, 弗朗索瓦·贝莱昂, 凯德·麦拉德, 让-保罗·博奈雷]</td>
-      <td>[剧情, 音乐]</td>
+      <td>[克里斯托夫·巴拉蒂]</td>
+      <td>[热拉尔·朱尼奥 ,  弗朗索瓦·贝莱昂 ,  凯德·麦拉德 ,  让-保罗·博奈雷 ]</td>
+      <td>[剧情 ,  音乐]</td>
       <td>9.3</td>
-      <td>790358</td>
-      <td>法国 / 瑞士 / 德国</td>
+      <td>791010</td>
+      <td>[法国 ,  瑞士 ,  德国]</td>
+      <td>1949年的法国乡村，音乐家克莱门特（杰勒德•尊诺饰）到了一间外号叫“塘低”的男子寄宿学校当...</td>
     </tr>
     <tr>
       <td>13</td>
       <td>楚门的世界 The Truman Show</td>
       <td>1998</td>
-      <td>彼得·威尔</td>
-      <td>[金·凯瑞, 劳拉·琳妮, 艾德·哈里斯, 诺亚·艾默里奇]</td>
-      <td>[剧情, 科幻]</td>
+      <td>[彼得·威尔]</td>
+      <td>[金·凯瑞 ,  劳拉·琳妮 ,  艾德·哈里斯 ,  诺亚·艾默里奇 ]</td>
+      <td>[剧情 ,  科幻]</td>
       <td>9.2</td>
-      <td>883838</td>
-      <td>美国</td>
+      <td>884626</td>
+      <td>[美国]</td>
+      <td>楚门（金•凯瑞JimCarrey饰）是一个平凡得不能再平凡的人，除了一些有些稀奇的经历之外—...</td>
     </tr>
     <tr>
       <td>14</td>
       <td>海上钢琴师 La leggenda del pianista sull'oceano</td>
       <td>1998</td>
-      <td>朱塞佩·托纳多雷</td>
-      <td>[蒂姆·罗斯, 普路特·泰勒·文斯, 比尔·努恩, 克兰伦斯·威廉姆斯三世]</td>
-      <td>[剧情, 音乐]</td>
+      <td>[朱塞佩·托纳多雷]</td>
+      <td>[蒂姆·罗斯 ,  普路特·泰勒·文斯 ,  比尔·努恩 ,  克兰伦斯·威廉姆斯三世 ]</td>
+      <td>[剧情 ,  音乐]</td>
       <td>9.2</td>
-      <td>913032</td>
-      <td>意大利</td>
+      <td>913721</td>
+      <td>[意大利]</td>
+      <td>本片讲述了一个钢琴天才传奇的一生。1900年，Virginian号豪华邮轮上，一个孤儿被遗弃...</td>
     </tr>
     <tr>
       <td>15</td>
       <td>星际穿越 Interstellar</td>
       <td>2014</td>
-      <td>克里斯托弗·诺兰</td>
-      <td>[马修·麦康纳, 安妮·海瑟薇, 杰西卡·查斯坦, 卡西·阿弗莱克]</td>
-      <td>[剧情, 科幻, 冒险]</td>
+      <td>[克里斯托弗·诺兰]</td>
+      <td>[马修·麦康纳 ,  安妮·海瑟薇 ,  杰西卡·查斯坦 ,  卡西·阿弗莱克 ]</td>
+      <td>[剧情 ,  科幻 ,  冒险]</td>
       <td>9.3</td>
-      <td>903379</td>
-      <td>美国 / 英国 / 加拿大 / 冰岛</td>
+      <td>904198</td>
+      <td>[美国 ,  英国 ,  加拿大 ,  冰岛]</td>
+      <td>近未来的地球黄沙遍野，小麦、秋葵等基础农作物相继因枯萎病灭绝，人类不再像从前那样仰望星空，放...</td>
     </tr>
     <tr>
       <td>16</td>
       <td>大话西游之大圣娶亲 西遊記大結局之仙履奇緣</td>
       <td>1995</td>
-      <td>刘镇伟</td>
-      <td>[周星驰, 吴孟达, 朱茵, 蔡少芬]</td>
-      <td>[喜剧, 爱情, 奇幻, 古装]</td>
+      <td>[刘镇伟]</td>
+      <td>[周星驰 ,  吴孟达 ,  朱茵 ,  蔡少芬 ]</td>
+      <td>[喜剧 ,  爱情 ,  奇幻 ,  古装]</td>
       <td>9.2</td>
-      <td>884664</td>
-      <td>中国香港 / 中国大陆</td>
+      <td>885401</td>
+      <td>[中国香港 ,  中国大陆]</td>
+      <td>至尊宝（周星驰饰）被月光宝盒带回到五百年前，遇见紫霞仙子（朱茵饰），被对方打上烙印成为对方的...</td>
     </tr>
     <tr>
       <td>17</td>
       <td>龙猫 となりのトトロ</td>
       <td>1988</td>
-      <td>宫崎骏</td>
-      <td>[日高法子, 坂本千夏, 糸井重里, 岛本须美]</td>
-      <td>[动画, 奇幻, 冒险]</td>
+      <td>[宫崎骏]</td>
+      <td>[日高法子 ,  坂本千夏 ,  糸井重里 ,  岛本须美 ]</td>
+      <td>[动画 ,  奇幻 ,  冒险]</td>
       <td>9.2</td>
-      <td>773511</td>
-      <td>日本</td>
+      <td>774019</td>
+      <td>[日本]</td>
+      <td>小月的母亲生病住院了，父亲带着她与四岁的妹妹小梅到乡间的居住。她们对那里的环境都感到十分新奇...</td>
     </tr>
     <tr>
       <td>18</td>
       <td>熔炉 도가니</td>
       <td>2011</td>
-      <td>黄东赫</td>
-      <td>[孔侑, 郑有美, 金志映, 金贤秀]</td>
+      <td>[黄东赫]</td>
+      <td>[孔侑 ,  郑有美 ,  金志映 ,  金贤秀 ]</td>
       <td>[剧情]</td>
       <td>9.3</td>
-      <td>527514</td>
-      <td>韩国</td>
+      <td>528044</td>
+      <td>[韩国]</td>
+      <td>来自首尔的哑语美术老师仁浩（孔宥饰）来到雾津，应聘慈爱聋哑人学校。天降大雾，他意外撞车，维修...</td>
     </tr>
     <tr>
       <td>19</td>
       <td>教父 The Godfather</td>
       <td>1972</td>
-      <td>弗朗西斯·福特·科波拉</td>
-      <td>[马龙·白兰度, 阿尔·帕西诺, 詹姆斯·肯恩, 理查德·卡斯特尔诺]</td>
-      <td>[剧情, 犯罪]</td>
+      <td>[弗朗西斯·福特·科波拉]</td>
+      <td>[马龙·白兰度 ,  阿尔·帕西诺 ,  詹姆斯·肯恩 ,  理查德·卡斯特尔诺 ]</td>
+      <td>[剧情 ,  犯罪]</td>
       <td>9.3</td>
-      <td>563105</td>
-      <td>美国</td>
+      <td>563546</td>
+      <td>[美国]</td>
+      <td>40年代的美国，“教父”维托·柯里昂（马龙·白兰度饰）是黑手党柯里昂家族的首领，带领家族从事...</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>无间道 無間道</td>
+      <td>2002</td>
+      <td>[刘伟强 ,  麦兆辉]</td>
+      <td>[刘德华 ,  梁朝伟 ,  黄秋生 ,  曾志伟 ]</td>
+      <td>[剧情 ,  悬疑 ,  犯罪]</td>
+      <td>9.2</td>
+      <td>726832</td>
+      <td>[中国香港]</td>
+      <td>1991年，香港黑帮三合会会员刘健明（刘德华）听从老大韩琛（曾志伟）的吩咐，加入警察部队成为...</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>疯狂动物城 Zootopia</td>
+      <td>2016</td>
+      <td>[拜伦·霍华德 ,  瑞奇·摩尔 ,  杰拉德·布什]</td>
+      <td>[金妮弗·古德温 ,  杰森·贝特曼 ,  伊德里斯·艾尔巴 ,  珍妮·斯蕾特 ]</td>
+      <td>[喜剧 ,  动画 ,  冒险]</td>
+      <td>9.2</td>
+      <td>1029085</td>
+      <td>[美国]</td>
+      <td>故事发生在一个所有哺乳类动物和谐共存的美好世界中，兔子朱迪（金妮弗·古德温GinniferG...</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>当幸福来敲门 The Pursuit of Happyness</td>
+      <td>2006</td>
+      <td>[加布里埃莱·穆奇诺]</td>
+      <td>[威尔·史密斯 ,  贾登·史密斯 ,  坦迪·牛顿 ,  布莱恩·豪威  ]</td>
+      <td>[剧情 ,  家庭 ,  传记]</td>
+      <td>9.1</td>
+      <td>917657</td>
+      <td>[美国]</td>
+      <td>克里斯•加纳（威尔·史密斯WillSmith饰）用尽全部积蓄买下了高科技治疗仪，到处向医院推...</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>怦然心动 Flipped</td>
+      <td>2010</td>
+      <td>[罗伯·莱纳]</td>
+      <td>[玛德琳·卡罗尔 ,  卡兰·麦克奥利菲 ,  瑞贝卡·德·莫妮 ,  安东尼·爱德华兹 ]</td>
+      <td>[剧情 ,  喜剧 ,  爱情]</td>
+      <td>9.0</td>
+      <td>1032221</td>
+      <td>[美国]</td>
+      <td>布莱斯（卡兰•麦克奥利菲CallanMcAuliffe饰）全家搬到小镇，邻家女孩朱丽（玛德琳...</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>触不可及 Intouchables</td>
+      <td>2011</td>
+      <td>[奥利维埃·纳卡什 ,  埃里克·托莱达诺]</td>
+      <td>[弗朗索瓦·克鲁塞 ,  奥玛·希 ,  安娜·勒尼 ,  奥德雷·弗勒罗 ]</td>
+      <td>[剧情 ,  喜剧]</td>
+      <td>9.2</td>
+      <td>598515</td>
+      <td>[法国]</td>
+      <td>因为一次跳伞事故，白人富翁菲利普Philippe（弗朗索瓦·克鲁塞FrançoisCluze...</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>蝙蝠侠：黑暗骑士 The Dark Knight</td>
+      <td>2008</td>
+      <td>[克里斯托弗·诺兰]</td>
+      <td>[克里斯蒂安·贝尔 ,  希斯·莱杰 ,  艾伦·艾克哈特 ,  迈克尔·凯恩 ]</td>
+      <td>[剧情 ,  动作 ,  科幻 ,  惊悚 ,  犯罪]</td>
+      <td>9.2</td>
+      <td>599251</td>
+      <td>[美国 ,  英国]</td>
+      <td>从亲眼目睹父母被人杀死的阴影中走出来的“蝙蝠侠”，经历了成长之后，已经不再是那个桀骜不的孤单...</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>活着</td>
+      <td>1994</td>
+      <td>[张艺谋]</td>
+      <td>[葛优 ,  巩俐 ,  姜武 ,  牛犇 ]</td>
+      <td>[剧情 ,  家庭 ,  历史]</td>
+      <td>9.2</td>
+      <td>469323</td>
+      <td>[中国大陆 ,  中国香港]</td>
+      <td>根据余华同名小说改编。富少福贵（葛优）嗜赌成性，妻子家珍（巩俐）屡劝无果后带着女儿凤霞离开了...</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>乱世佳人 Gone with the Wind</td>
+      <td>1939</td>
+      <td>[维克多·弗莱明 ,  乔治·库克 ,  山姆·伍德]</td>
+      <td>[费雯·丽 ,  克拉克·盖博 ,  奥利维娅·德哈维兰 ,  托马斯·米切尔 ]</td>
+      <td>[剧情 ,  爱情 ,  历史 ,  战争]</td>
+      <td>9.3</td>
+      <td>411174</td>
+      <td>[美国]</td>
+      <td>美国南北战争前夕，南方农场塔拉庄园的千金斯嘉丽（费雯·丽VivienLeigh饰）爱上了另一...</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>控方证人 Witness for the Prosecution</td>
+      <td>1957</td>
+      <td>[比利·怀德]</td>
+      <td>[泰隆·鲍华 ,  玛琳·黛德丽 ,  查尔斯·劳顿 ,  爱尔莎·兰切斯特 ]</td>
+      <td>[剧情 ,  悬疑 ,  犯罪]</td>
+      <td>9.6</td>
+      <td>215720</td>
+      <td>[美国]</td>
+      <td>伦敦著名刑案辩护律师韦菲爵士（查尔斯•劳顿CharlesLaughton饰）接受了心脏病治疗...</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>少年派的奇幻漂流 Life of Pi</td>
+      <td>2012</td>
+      <td>[李安]</td>
+      <td>[苏拉·沙玛 ,  伊尔凡·可汗 ,  拉菲·斯波 ,  阿迪勒·侯赛因 ]</td>
+      <td>[剧情 ,  奇幻 ,  冒险]</td>
+      <td>9.0</td>
+      <td>890499</td>
+      <td>[美国 ,  中国台湾 ,  英国 ,  加拿大]</td>
+      <td>故事开始于蒙特娄，也结束于蒙特娄。一名在找寻灵感的作家（拉菲·斯波RafeSpall饰）无意...</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>摔跤吧！爸爸 Dangal</td>
+      <td>2016</td>
+      <td>[涅提·蒂瓦里]</td>
+      <td>[阿米尔·汗 ,  法缇玛·萨那·纱卡 ,  桑亚·玛荷塔 ,  阿帕尔夏克提·库拉那 ]</td>
+      <td>[剧情 ,  家庭 ,  传记 ,  运动]</td>
+      <td>9.0</td>
+      <td>904877</td>
+      <td>[印度]</td>
+      <td>马哈维亚（阿米尔·汗AamirKhan饰）曾经是一名前途无量的摔跤运动员，在放弃了职业生涯后...</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>指环王3：王者无敌 The Lord of the Rings: The Return of...</td>
+      <td>2003</td>
+      <td>[彼得·杰克逊]</td>
+      <td>[维果·莫腾森 ,  伊利亚·伍德 ,  西恩·奥斯汀 ,  丽芙·泰勒 ]</td>
+      <td>[剧情 ,  动作 ,  奇幻 ,  冒险]</td>
+      <td>9.2</td>
+      <td>451030</td>
+      <td>[美国 ,  新西兰]</td>
+      <td>魔幻战争逐渐进入高潮阶段。霍比特人弗拉多（伊利亚·伍德ElijahWood饰）携带着魔戒，与...</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>鬼子来了</td>
+      <td>2000</td>
+      <td>[姜文]</td>
+      <td>[姜文 ,  香川照之 ,  袁丁 ,  姜宏波 ]</td>
+      <td>[剧情 ,  历史 ,  战争]</td>
+      <td>9.2</td>
+      <td>379684</td>
+      <td>[中国大陆]</td>
+      <td>第二次世界大战期间，中国河北挂甲台村的农民马大三（姜文饰）在日本人的统治下过着平静的生活。一...</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>飞屋环游记 Up</td>
+      <td>2009</td>
+      <td>[彼特·道格特 ,  鲍勃·彼德森]</td>
+      <td>[爱德华·阿斯纳 ,  克里斯托弗·普卢默 ,  乔丹·长井 ,  鲍勃·彼德森 ]</td>
+      <td>[剧情 ,  喜剧 ,  动画 ,  冒险]</td>
+      <td>9.0</td>
+      <td>812720</td>
+      <td>[美国]</td>
+      <td>小男孩卡尔（CarlFredricksen）怀揣着对于冒险的热爱偶遇假小子艾丽（Ellie）...</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>天空之城 天空の城ラピュタ</td>
+      <td>1986</td>
+      <td>[宫崎骏]</td>
+      <td>[田中真弓 ,  横泽启子 ,  初井言荣 ,  寺田农 ]</td>
+      <td>[动画 ,  奇幻 ,  冒险]</td>
+      <td>9.1</td>
+      <td>526871</td>
+      <td>[日本]</td>
+      <td>古老帝国拉比达是一座漂浮在空中的巨大的机器岛，传说那里已经无人居住，蕴藏着巨大的财富。因此，...</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>十二怒汉 12 Angry Men</td>
+      <td>1957</td>
+      <td>[西德尼·吕美特]</td>
+      <td>[亨利·方达 ,  马丁·鲍尔萨姆 ,  约翰·菲德勒 ,  李·科布 ]</td>
+      <td>[剧情]</td>
+      <td>9.4</td>
+      <td>270222</td>
+      <td>[美国]</td>
+      <td>一个在贫民窟长大的18岁少年因为涉嫌杀害自己的父亲被告上法庭，证人言之凿凿，各方面的证据都对...</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>天堂电影院 Nuovo Cinema Paradiso</td>
+      <td>1988</td>
+      <td>[朱塞佩·托纳多雷]</td>
+      <td>[安东内拉·阿蒂利 ,  恩佐·卡拉瓦勒 ,  艾萨·丹尼埃利 ,  里奥·故罗塔 ]</td>
+      <td>[剧情 ,  爱情]</td>
+      <td>9.2</td>
+      <td>429017</td>
+      <td>[意大利 ,  法国]</td>
+      <td>意大利南部小镇，古灵精怪的小男孩多多（萨瓦特利·卡西欧饰）喜欢看电影，更喜欢看放映师艾佛特（...</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>大话西游之月光宝盒 西遊記第壹佰零壹回之月光寶盒</td>
+      <td>1995</td>
+      <td>[刘镇伟]</td>
+      <td>[周星驰 ,  吴孟达 ,  罗家英 ,  蓝洁瑛 ]</td>
+      <td>[喜剧 ,  爱情 ,  奇幻 ,  古装]</td>
+      <td>9.0</td>
+      <td>715223</td>
+      <td>[中国香港 ,  中国大陆]</td>
+      <td>孙悟空（周星驰）护送唐三藏（罗家英）去西天取经路上，与牛魔王合谋欲杀害唐三藏，并偷走了月光宝...</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>哈尔的移动城堡 ハウルの動く城</td>
+      <td>2004</td>
+      <td>[宫崎骏]</td>
+      <td>[倍赏千惠子 ,  木村拓哉 ,  美轮明宏 ,  我修院达也 ]</td>
+      <td>[动画 ,  奇幻 ,  冒险]</td>
+      <td>9.0</td>
+      <td>595769</td>
+      <td>[日本]</td>
+      <td>继母因无力负担生活，将苏菲和她的两个妹妹都送到了制帽店去当学徒。两个妹妹很快先后就离开了制帽...</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>末代皇帝 The Last Emperor</td>
+      <td>1987</td>
+      <td>[贝纳尔多·贝托鲁奇]</td>
+      <td>[尊龙 ,  陈冲 ,  邬君梅 ,  彼得·奥图尔 ]</td>
+      <td>[剧情 ,  传记 ,  历史]</td>
+      <td>9.2</td>
+      <td>385261</td>
+      <td>[英国 ,  意大利 ,  中国大陆 ,  法国]</td>
+      <td>溥仪（尊龙饰）的一生在电影中娓娓道来。他从三岁起登基，年幼的眼光中只有大臣身上的一只蝈蝈，江...</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>寻梦环游记 Coco</td>
+      <td>2017</td>
+      <td>[李·昂克里奇 ,  阿德里安·莫利纳]</td>
+      <td>[安东尼·冈萨雷斯 ,  盖尔·加西亚·贝纳尔 ,  本杰明·布拉特 ,  阿兰娜·乌巴赫 ]</td>
+      <td>[喜剧 ,  动画 ,  音乐 ,  奇幻]</td>
+      <td>9.0</td>
+      <td>862694</td>
+      <td>[美国]</td>
+      <td>热爱音乐的米格尔（安东尼·冈萨雷兹AnthonyGonzalez配音）不幸地出生在一个视音乐...</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>罗马假日 Roman Holiday</td>
+      <td>1953</td>
+      <td>[威廉·惠勒]</td>
+      <td>[奥黛丽·赫本 ,  格利高里·派克 ,  埃迪·艾伯特 ,  哈特利·鲍尔 ]</td>
+      <td>[剧情 ,  喜剧 ,  爱情]</td>
+      <td>9.0</td>
+      <td>602353</td>
+      <td>[美国]</td>
+      <td>欧洲某国的安妮公主（奥黛丽·赫本AudreyHepburn饰）到访罗马，国务烦身，但她又厌倦...</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>搏击俱乐部 Fight Club</td>
+      <td>1999</td>
+      <td>[大卫·芬奇]</td>
+      <td>[爱德华·诺顿 ,  布拉德·皮特 ,  海伦娜·伯翰·卡特 ,  扎克·格雷尼尔 ]</td>
+      <td>[剧情 ,  动作 ,  悬疑 ,  惊悚]</td>
+      <td>9.0</td>
+      <td>562209</td>
+      <td>[美国 ,  德国]</td>
+      <td>杰克（爱德华•诺顿饰）是一个大汽车公司的职员，患有严重的失眠症，对周围的一切充满危机和憎恨。...</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>闻香识女人 Scent of a Woman</td>
+      <td>1992</td>
+      <td>[马丁·布莱斯特]</td>
+      <td>[阿尔·帕西诺 ,  克里斯·奥唐纳 ,  詹姆斯·瑞布霍恩 ,  加布里埃尔·安瓦尔 ]</td>
+      <td>[剧情]</td>
+      <td>9.0</td>
+      <td>516919</td>
+      <td>[美国]</td>
+      <td>查理（克里斯•奥唐纳ChrisO'Donnell饰）是一个普通的中学生，他因为见证着一件恶作...</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>素媛 소원</td>
+      <td>2013</td>
+      <td>[李濬益]</td>
+      <td>[薛耿求 ,  严志媛 ,  李来 ,  金海淑 ]</td>
+      <td>[剧情]</td>
+      <td>9.2</td>
+      <td>346893</td>
+      <td>[韩国]</td>
+      <td>她（李来饰）是一个美丽平凡的小女孩，和爸爸妈妈生活在位于街角的家中。家里经营着以她的名字素媛...</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>辩护人 변호인</td>
+      <td>2013</td>
+      <td>[杨宇硕]</td>
+      <td>[宋康昊 ,  吴达洙 ,  金英爱 ,  郭度沅 ]</td>
+      <td>[剧情]</td>
+      <td>9.2</td>
+      <td>360192</td>
+      <td>[韩国]</td>
+      <td>1978年，只有高中学历的宋佑硕（宋康昊饰）通过多年的艰苦努力，终于通过司法考试，并在成为法...</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>窃听风暴 Das Leben der Anderen</td>
+      <td>2006</td>
+      <td>[弗洛里安·亨克尔·冯·多纳斯马尔克]</td>
+      <td>[乌尔里希·穆埃 ,  马蒂娜·格德克 ,  塞巴斯蒂安·科赫 ,  乌尔里希·图库尔 ]</td>
+      <td>[剧情 ,  悬疑]</td>
+      <td>9.1</td>
+      <td>354298</td>
+      <td>[德国]</td>
+      <td>1984年的东德，整个社会笼罩在国家安全局的高压统治之下，特工魏斯曼（乌尔利希·穆厄饰）奉命...</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>死亡诗社 Dead Poets Society</td>
+      <td>1989</td>
+      <td>[彼得·威尔]</td>
+      <td>[罗宾·威廉姆斯 ,  罗伯特·肖恩·莱纳德 ,  伊桑·霍克 ,  乔西·查尔斯 ]</td>
+      <td>[剧情]</td>
+      <td>9.1</td>
+      <td>431507</td>
+      <td>[美国]</td>
+      <td>威尔顿预备学院以其沉稳凝重的教学风格和较高的升学率闻名，作为其毕业班的学生，理想就是升入名校...</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>何以为家 كفرناحوم</td>
+      <td>2018</td>
+      <td>[娜丁·拉巴基]</td>
+      <td>[赞恩·阿尔·拉菲亚 ,  约丹诺斯·希费罗 ,  博鲁瓦蒂夫·特雷杰·班科尔 ,  卡萨尔...</td>
+      <td>[剧情]</td>
+      <td>9.1</td>
+      <td>413440</td>
+      <td>[黎巴嫩 ,  法国 ,  美国]</td>
+      <td>法庭上，十二岁的男孩赞恩向法官状告他的亲生父母，原因是，他们给了他生命。是什么样的经历让一个...</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>两杆大烟枪 Lock, Stock and Two Smoking Barrels</td>
+      <td>1998</td>
+      <td>[盖·里奇]</td>
+      <td>[杰森·弗莱明 ,  德克斯特·弗莱彻 ,  尼克·莫兰 ,  杰森·斯坦森 ]</td>
+      <td>[剧情 ,  喜剧 ,  犯罪]</td>
+      <td>9.1</td>
+      <td>381690</td>
+      <td>[英国]</td>
+      <td>艾迪（尼克·莫伦）思维敏捷，是个玩牌高手。在三个好友的支持下，艾迪携巨资参加了黑社会的高额赌...</td>
     </tr>
   </tbody>
 </table>
 </div>
+
+
 
 
     </div>
